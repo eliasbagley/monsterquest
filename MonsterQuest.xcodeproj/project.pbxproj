@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CCAF87A114D23B4000F488EB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCAF87A014D23B4000F488EB /* UIKit.framework */; };
+		CCAF87A314D23B4000F488EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCAF87A214D23B4000F488EB /* Foundation.framework */; };
+		CCAF87A514D23B4000F488EB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCAF87A414D23B4000F488EB /* CoreGraphics.framework */; };
+		CCAF87AB14D23B4000F488EB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CCAF87A914D23B4000F488EB /* InfoPlist.strings */; };
+		CCAF87AE14D23B4000F488EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAF87AD14D23B4000F488EB /* main.m */; };
+		CCAF87B114D23B4000F488EB /* MonsterQuestAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAF87B014D23B4000F488EB /* MonsterQuestAppDelegate.m */; };
+		CCAF87B414D23B4000F488EB /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCAF87B214D23B4000F488EB /* MainWindow.xib */; };
+		CCAF87B714D23B4000F488EB /* MonsterQuestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAF87B614D23B4000F488EB /* MonsterQuestViewController.m */; };
+		CCAF87BA14D23B4000F488EB /* MonsterQuestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCAF87B814D23B4000F488EB /* MonsterQuestViewController.xib */; };
+		CCAF87C114D23B4000F488EB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCAF87A014D23B4000F488EB /* UIKit.framework */; };
+		CCAF87C214D23B4000F488EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCAF87A214D23B4000F488EB /* Foundation.framework */; };
+		CCAF87C314D23B4000F488EB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCAF87A414D23B4000F488EB /* CoreGraphics.framework */; };
+		CCAF87CB14D23B4100F488EB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CCAF87C914D23B4100F488EB /* InfoPlist.strings */; };
+		CCAF87CE14D23B4100F488EB /* MonsterQuestTests.h in Resources */ = {isa = PBXBuildFile; fileRef = CCAF87CD14D23B4100F488EB /* MonsterQuestTests.h */; };
+		CCAF87D014D23B4100F488EB /* MonsterQuestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAF87CF14D23B4100F488EB /* MonsterQuestTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CCAF87C414D23B4000F488EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCAF879314D23B3F00F488EB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCAF879B14D23B3F00F488EB;
+			remoteInfo = MonsterQuest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CCAF879C14D23B3F00F488EB /* MonsterQuest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonsterQuest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCAF87A014D23B4000F488EB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CCAF87A214D23B4000F488EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CCAF87A414D23B4000F488EB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CCAF87A814D23B4000F488EB /* MonsterQuest-Info.plist */ = {isa = PBXFileReference; path = "MonsterQuest-Info.plist"; sourceTree = "<group>"; };
+		CCAF87AA14D23B4000F488EB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CCAF87AC14D23B4000F488EB /* MonsterQuest-Prefix.pch */ = {isa = PBXFileReference; path = "MonsterQuest-Prefix.pch"; sourceTree = "<group>"; };
+		CCAF87AD14D23B4000F488EB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CCAF87AF14D23B4000F488EB /* MonsterQuestAppDelegate.h */ = {isa = PBXFileReference; path = MonsterQuestAppDelegate.h; sourceTree = "<group>"; };
+		CCAF87B014D23B4000F488EB /* MonsterQuestAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MonsterQuestAppDelegate.m; sourceTree = "<group>"; };
+		CCAF87B314D23B4000F488EB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		CCAF87B514D23B4000F488EB /* MonsterQuestViewController.h */ = {isa = PBXFileReference; path = MonsterQuestViewController.h; sourceTree = "<group>"; };
+		CCAF87B614D23B4000F488EB /* MonsterQuestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MonsterQuestViewController.m; sourceTree = "<group>"; };
+		CCAF87B914D23B4000F488EB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MonsterQuestViewController.xib; sourceTree = "<group>"; };
+		CCAF87C014D23B4000F488EB /* MonsterQuestTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonsterQuestTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCAF87C814D23B4000F488EB /* MonsterQuestTests-Info.plist */ = {isa = PBXFileReference; path = "MonsterQuestTests-Info.plist"; sourceTree = "<group>"; };
+		CCAF87CA14D23B4100F488EB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CCAF87CC14D23B4100F488EB /* MonsterQuestTests-Prefix.pch */ = {isa = PBXFileReference; path = "MonsterQuestTests-Prefix.pch"; sourceTree = "<group>"; };
+		CCAF87CD14D23B4100F488EB /* MonsterQuestTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MonsterQuestTests.h; sourceTree = "<group>"; };
+		CCAF87CF14D23B4100F488EB /* MonsterQuestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MonsterQuestTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CCAF879914D23B3F00F488EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCAF87A114D23B4000F488EB /* UIKit.framework in Frameworks */,
+				CCAF87A314D23B4000F488EB /* Foundation.framework in Frameworks */,
+				CCAF87A514D23B4000F488EB /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCAF87BC14D23B4000F488EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCAF87C114D23B4000F488EB /* UIKit.framework in Frameworks */,
+				CCAF87C214D23B4000F488EB /* Foundation.framework in Frameworks */,
+				CCAF87C314D23B4000F488EB /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CCAF879114D23B3F00F488EB = {
+			isa = PBXGroup;
+			children = (
+				CCAF87A614D23B4000F488EB /* MonsterQuest */,
+				CCAF87C614D23B4000F488EB /* MonsterQuestTests */,
+				CCAF879F14D23B4000F488EB /* Frameworks */,
+				CCAF879D14D23B4000F488EB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CCAF879D14D23B4000F488EB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CCAF879C14D23B3F00F488EB /* MonsterQuest.app */,
+				CCAF87C014D23B4000F488EB /* MonsterQuestTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CCAF879F14D23B4000F488EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCAF87A014D23B4000F488EB /* UIKit.framework */,
+				CCAF87A214D23B4000F488EB /* Foundation.framework */,
+				CCAF87A414D23B4000F488EB /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CCAF87A614D23B4000F488EB /* MonsterQuest */ = {
+			isa = PBXGroup;
+			children = (
+				CCAF87AF14D23B4000F488EB /* MonsterQuestAppDelegate.h */,
+				CCAF87B014D23B4000F488EB /* MonsterQuestAppDelegate.m */,
+				CCAF87B214D23B4000F488EB /* MainWindow.xib */,
+				CCAF87B514D23B4000F488EB /* MonsterQuestViewController.h */,
+				CCAF87B614D23B4000F488EB /* MonsterQuestViewController.m */,
+				CCAF87B814D23B4000F488EB /* MonsterQuestViewController.xib */,
+				CCAF87A714D23B4000F488EB /* Supporting Files */,
+			);
+			path = MonsterQuest;
+			sourceTree = "<group>";
+		};
+		CCAF87A714D23B4000F488EB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CCAF87A814D23B4000F488EB /* MonsterQuest-Info.plist */,
+				CCAF87A914D23B4000F488EB /* InfoPlist.strings */,
+				CCAF87AC14D23B4000F488EB /* MonsterQuest-Prefix.pch */,
+				CCAF87AD14D23B4000F488EB /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CCAF87C614D23B4000F488EB /* MonsterQuestTests */ = {
+			isa = PBXGroup;
+			children = (
+				CCAF87CD14D23B4100F488EB /* MonsterQuestTests.h */,
+				CCAF87CF14D23B4100F488EB /* MonsterQuestTests.m */,
+				CCAF87C714D23B4000F488EB /* Supporting Files */,
+			);
+			path = MonsterQuestTests;
+			sourceTree = "<group>";
+		};
+		CCAF87C714D23B4000F488EB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CCAF87C814D23B4000F488EB /* MonsterQuestTests-Info.plist */,
+				CCAF87C914D23B4100F488EB /* InfoPlist.strings */,
+				CCAF87CC14D23B4100F488EB /* MonsterQuestTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CCAF879B14D23B3F00F488EB /* MonsterQuest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCAF87D314D23B4100F488EB /* Build configuration list for PBXNativeTarget "MonsterQuest" */;
+			buildPhases = (
+				CCAF879814D23B3F00F488EB /* Sources */,
+				CCAF879914D23B3F00F488EB /* Frameworks */,
+				CCAF879A14D23B3F00F488EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MonsterQuest;
+			productName = MonsterQuest;
+			productReference = CCAF879C14D23B3F00F488EB /* MonsterQuest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CCAF87BF14D23B4000F488EB /* MonsterQuestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCAF87D614D23B4100F488EB /* Build configuration list for PBXNativeTarget "MonsterQuestTests" */;
+			buildPhases = (
+				CCAF87BB14D23B4000F488EB /* Sources */,
+				CCAF87BC14D23B4000F488EB /* Frameworks */,
+				CCAF87BD14D23B4000F488EB /* Resources */,
+				CCAF87BE14D23B4000F488EB /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CCAF87C514D23B4000F488EB /* PBXTargetDependency */,
+			);
+			name = MonsterQuestTests;
+			productName = MonsterQuestTests;
+			productReference = CCAF87C014D23B4000F488EB /* MonsterQuestTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CCAF879314D23B3F00F488EB /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = CCAF879614D23B3F00F488EB /* Build configuration list for PBXProject "MonsterQuest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CCAF879114D23B3F00F488EB;
+			productRefGroup = CCAF879D14D23B4000F488EB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CCAF879B14D23B3F00F488EB /* MonsterQuest */,
+				CCAF87BF14D23B4000F488EB /* MonsterQuestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CCAF879A14D23B3F00F488EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCAF87AB14D23B4000F488EB /* InfoPlist.strings in Resources */,
+				CCAF87B414D23B4000F488EB /* MainWindow.xib in Resources */,
+				CCAF87BA14D23B4000F488EB /* MonsterQuestViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCAF87BD14D23B4000F488EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCAF87CB14D23B4100F488EB /* InfoPlist.strings in Resources */,
+				CCAF87CE14D23B4100F488EB /* MonsterQuestTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CCAF87BE14D23B4000F488EB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CCAF879814D23B3F00F488EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCAF87AE14D23B4000F488EB /* main.m in Sources */,
+				CCAF87B114D23B4000F488EB /* MonsterQuestAppDelegate.m in Sources */,
+				CCAF87B714D23B4000F488EB /* MonsterQuestViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCAF87BB14D23B4000F488EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCAF87D014D23B4100F488EB /* MonsterQuestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CCAF87C514D23B4000F488EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CCAF879B14D23B3F00F488EB /* MonsterQuest */;
+			targetProxy = CCAF87C414D23B4000F488EB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CCAF87A914D23B4000F488EB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCAF87AA14D23B4000F488EB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CCAF87B214D23B4000F488EB /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCAF87B314D23B4000F488EB /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		CCAF87B814D23B4000F488EB /* MonsterQuestViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCAF87B914D23B4000F488EB /* en */,
+			);
+			name = MonsterQuestViewController.xib;
+			sourceTree = "<group>";
+		};
+		CCAF87C914D23B4100F488EB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCAF87CA14D23B4100F488EB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CCAF87D114D23B4100F488EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CCAF87D214D23B4100F488EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		CCAF87D414D23B4100F488EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MonsterQuest/MonsterQuest-Prefix.pch";
+				INFOPLIST_FILE = "MonsterQuest/MonsterQuest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CCAF87D514D23B4100F488EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MonsterQuest/MonsterQuest-Prefix.pch";
+				INFOPLIST_FILE = "MonsterQuest/MonsterQuest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		CCAF87D714D23B4100F488EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MonsterQuest.app/MonsterQuest";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MonsterQuestTests/MonsterQuestTests-Prefix.pch";
+				INFOPLIST_FILE = "MonsterQuestTests/MonsterQuestTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		CCAF87D814D23B4100F488EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MonsterQuest.app/MonsterQuest";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MonsterQuestTests/MonsterQuestTests-Prefix.pch";
+				INFOPLIST_FILE = "MonsterQuestTests/MonsterQuestTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CCAF879614D23B3F00F488EB /* Build configuration list for PBXProject "MonsterQuest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCAF87D114D23B4100F488EB /* Debug */,
+				CCAF87D214D23B4100F488EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCAF87D314D23B4100F488EB /* Build configuration list for PBXNativeTarget "MonsterQuest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCAF87D414D23B4100F488EB /* Debug */,
+				CCAF87D514D23B4100F488EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CCAF87D614D23B4100F488EB /* Build configuration list for PBXNativeTarget "MonsterQuestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCAF87D714D23B4100F488EB /* Debug */,
+				CCAF87D814D23B4100F488EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CCAF879314D23B3F00F488EB /* Project object */;
+}
