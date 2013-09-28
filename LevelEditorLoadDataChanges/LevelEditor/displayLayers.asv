@@ -1,0 +1,78 @@
+%resets the figure (to erase all previous stuff), then draws all layers
+
+%redisplay the map
+%clf;
+cla reset;
+%%delete(handles.scrollPanelHandle);
+%delete(handles.hMagBox);
+%figure(handles.mapFigureHandle);
+%handles.imageHandle = image(layerImage{1});
+%set(handles.imageHandle, 'AlphaData', layerAlpha{1});
+%axis([0 imageSize(1) 0 imageSize(2)]);
+%hold on;
+%matrix = imread('cameraman.tif');
+%h = image(layerImage{1});
+%flatten; %flatten all layers before displaying it. this way, only a single image is shown
+%api.replaceImage(flattenedImage, 'PreserveView', true);
+%handles.scrollPanelHandle = imscrollpanel(handles.mapFigureHandle, handles.imageHandle);
+%set(handles.scrollPanelHandle,'Units','normalized',...
+%    'Position',[0 .1 1 .9])
+
+%Add a magnification box and an overview tool
+%handles.hMagBox = immagbox(handles.mapFigureHandle, handles.imageHandle);
+%pos = get(handles.hMagBox,'Position');
+%set(handles.hMagBox,'Position',[0 0 pos(3) pos(4)])
+%imoverview(handles.imageHandle)
+
+%Get the scroll panel API to programmatically control the view
+%api = iptgetapi(handles.scrollPanelHandle);
+
+% is it faster to flatten, or to show each layer?
+switch directionStr
+    case 'UD'
+        zoneStruct2 = localZoneMap{1, 2}; % up by default
+        doubleZoneStruct.obstacles = [zoneStruct2.obstacles; zoneStruct.obstacles];
+        doubleZoneStruct.grass = [zoneStruct2.grass; zoneStruct.grass];
+        otherSaveDir = zoneStruct2.name;
+    case 'LR'
+        zoneStruct2 = localZoneMap{2, 3}; % right by defalt, remember row/col
+        doubleZoneStruct.obstacles = [zoneStruct.obstacles zoneStruct2.obstacles];
+        doubleZoneStruct.grass = [zoneStruct.grass zoneStruct2.grass];
+        otherSaveDir = zoneStruct2.name;
+    case 'NONE'
+end
+
+for i = 1:numLayers
+    
+    
+    
+    switch directionStr
+        case 'UD'
+            doubleZoneStruct.layerImage{i} = [zoneStruct2.layerImage{i}; zoneStruct.layerImage{i}];
+            doubleZoneStruct.layerAlpha{i} = [zoneStruct2.layerAlpha{i}; zoneStruct.layerAlpha{i}];
+            
+        case 'LR'
+            doubleZoneStruct.layerImage{i} = [zoneStruct.layerImage{i} zoneStruct2.layerImage{i}];
+            doubleZoneStruct.layerAlpha{i} = [zoneStruct.layerAlpha{i} zoneStruct2.layerAlpha{i}];
+            
+    end
+    
+    
+    h =          imshow(doubleZoneStruct.layerImage{i}, 'InitialMagnification', 100);
+    set(h, 'AlphaData', doubleZoneStruct.layerAlpha{i});
+    
+    hold on;
+end
+
+switch currentLayer
+    case 1
+        layerStr = 'Base Layer';
+    case 2
+        layerStr = 'Obstacle Layer';
+    case 3
+        layerStr = 'Grass Layer';
+    case 4
+        layerStr = 'Overlay Layer';
+end
+
+set(handles.mapFigureHandle, 'Name', strcat('Map-', saveDir, '-', layerStr));

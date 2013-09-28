@@ -1,0 +1,85 @@
+%resets the figure (to erase all previous stuff), then draws all layers
+
+%redisplay the map
+
+
+%cla reset;
+
+
+fprintf('displaying layers.. \n');
+
+
+for i = 1:numLayers
+    
+    switch directionStr
+        case 'UD'
+            doubleZoneStruct.layerImage{i} = [zoneStruct2.layerImage{i}; zoneStruct.layerImage{i}];
+            doubleZoneStruct.layerAlpha{i} = [zoneStruct2.layerAlpha{i}; zoneStruct.layerAlpha{i}];
+            
+        case 'LR'
+            doubleZoneStruct.layerImage{i} = [zoneStruct.layerImage{i} zoneStruct2.layerImage{i}];
+            doubleZoneStruct.layerAlpha{i} = [zoneStruct.layerAlpha{i} zoneStruct2.layerAlpha{i}];
+    end
+    
+    %h = imshow(doubleZoneStruct.layerImage{i}, 'InitialMagnification', 100);
+    %set(h, 'AlphaData', doubleZoneStruct.layerAlpha{i});
+    
+    %hold on;
+    
+    
+end
+
+if ((directionStr == 'UD' && ~vert) || (directionStr == 'LR' && vert))
+set(h1, 'CData', doubleZoneStruct.layerImage{1}, 'AlphaData', doubleZoneStruct.layerAlpha{1});
+set(h2, 'CData', doubleZoneStruct.layerImage{2}, 'AlphaData', doubleZoneStruct.layerAlpha{2});
+set(h3, 'CData', doubleZoneStruct.layerImage{3}, 'AlphaData', doubleZoneStruct.layerAlpha{3});
+set(h4, 'CData', doubleZoneStruct.layerImage{4}, 'AlphaData', doubleZoneStruct.layerAlpha{4});
+set(h5, 'CData', doubleZoneStruct.layerImage{5}, 'AlphaData', doubleZoneStruct.layerAlpha{5});
+
+
+
+switch directionStr
+    case 'UD'
+        %zoneStruct2 = localZoneMap{1,2}; % up
+        doubleZoneStruct.obstacles = [zoneStruct2.obstacles; zoneStruct.obstacles];
+        doubleZoneStruct.grass = [zoneStruct2.grass; zoneStruct.grass];
+        otherSaveDir = zoneStruct2.name;
+        vert = 1;
+    case 'LR'
+        %zoneStruct2 = localZoneMap{2,3}; % up
+        doubleZoneStruct.obstacles = [zoneStruct.obstacles zoneStruct2.obstacles];
+        doubleZoneStruct.grass = [zoneStruct.grass zoneStruct2.grass];
+        otherSaveDir = zoneStruct2.name;
+        vert = 0;
+    case 'NONE'
+end
+
+
+% switch currentLayer
+%     case 1
+%         set(h1, 'CData', doubleZoneStruct.layerImage{currentLayer}, 'AlphaData', doubleZoneStruct.layerAlpha{currentLayer});
+%     case 2
+%         set(h2, 'CData', doubleZoneStruct.layerImage{currentLayer}, 'AlphaData', doubleZoneStruct.layerAlpha{currentLayer});
+%     case 3
+%         set(h3, 'CData', doubleZoneStruct.layerImage{currentLayer}, 'AlphaData', doubleZoneStruct.layerAlpha{currentLayer});
+%     case 4
+%         set(h4, 'CData', doubleZoneStruct.layerImage{currentLayer}, 'AlphaData', doubleZoneStruct.layerAlpha{currentLayer});
+% end
+%h =          imshow(doubleZoneStruct.layerImage{i}, 'InitialMagnification', 100);
+%set(h, 'AlphaData', doubleZoneStruct.layerAlpha{i});
+
+%hold on;
+
+
+switch currentLayer
+    case 1
+        layerStr = 'Base Layer';
+    case 2
+        layerStr = 'Obstacle Layer';
+    case 3
+        layerStr = 'Grass Layer';
+    case 4
+        layerStr = 'Overlay Layer';
+end
+
+set(handles.mapFigureHandle, 'Name', strcat('Map-', saveDir, '-', layerStr));

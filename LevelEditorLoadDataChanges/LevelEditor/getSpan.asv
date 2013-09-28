@@ -1,0 +1,31 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   Author: Elias Bagley
+%   Date:   1/29/2012
+%   CS 4500 Senior Capstone Project
+%   
+%  This function returns the number of rows and columns that the user
+%  dragged as a result of the getrect function call, given the pixel size
+%  of a grid.
+%
+%   input: rect, [x y width height], result of getrect()
+%           
+%      
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+function [row col] = getSpan(rect, pxPerGrid)
+
+width = rect(3);
+height = rect(4);
+
+x_bottomRight = x+width;
+y_bottomRight = y+height;
+
+x_bottomRightStart = x_bottomRight - mod(x_bottomRight, pxPerGrid)+1;
+y_bottomRightStart = y_bottomRight - mod(y_bottomRight, pxPerGrid)+1;
+
+
+% determines the number of rows and columns that the user selected
+% with the getrect function (verified works)
+row = (y_bottomRightStart-yStartPxTile)/pxPerGrid+1;
+col = (x_bottomRightStart-xStartPxTile)/pxPerGrid+1;
+
+end

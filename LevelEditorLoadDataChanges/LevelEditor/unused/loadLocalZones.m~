@@ -1,0 +1,53 @@
+% load local zones
+
+
+function localZoneMap = loadLocalZones(localZoneMap, saveDir, direction)
+
+tic
+% represents 8 point connectivity of the map
+
+% if direction is [0 0], then load everything. if it isn't, then shift
+% everything and load what is new. it will likely be faster
+cd zones;
+index = str2num(saveDir);
+
+
+x = (index(1)-1):(index(1)+1);
+y = (index(2)-1):(index(2)+1);
+
+if all(direction == [0 0])
+    for i=1:3
+        for j=1:3
+            dirStr = strcat(num2str(x(i)), ',', num2str(y(end+1-j)));
+            localZoneMap{j,i} = blankZone(dirStr);
+        end
+    end
+else
+   localZoneMap = circshift(localZoneMap, direction);
+   
+   switch direction
+       case [1 0] %up
+           i =
+       case [-1 0] %down
+       case [0 1] %left
+       case [0 -1] %right
+   
+   
+end
+
+for i = 1:3
+    for j = 1:3
+        % find the folder that corresponds to this location
+        dirStr = strcat(num2str(x(i)), ',', num2str(y(end+1-j)));
+        
+        if exist(dirStr, 'dir')
+            localZoneMap{j,i} = loadZone(dirStr); % need to test
+        else
+            localZoneMap{j,i} = blankZone(dirStr);
+        end
+    end
+end
+
+cd ..;
+
+toc

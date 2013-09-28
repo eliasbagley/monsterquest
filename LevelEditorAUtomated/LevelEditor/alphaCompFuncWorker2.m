@@ -1,0 +1,1 @@
+result(1:end,1:end,2) = (A(1:end,1:end,2).*Aalpha(1:end,1:end)+B(1:end,1:end,2).*Balpha(1:end,1:end).*(1-Aalpha(1:end,1:end)));%./resultAlpha(1:end,1:end);

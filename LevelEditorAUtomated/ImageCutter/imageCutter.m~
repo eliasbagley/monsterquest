@@ -1,0 +1,21 @@
+% image cutting script
+
+[largeImage map alpha] = imread('bigset.png');
+resultSize = [24 24];
+
+
+imageSize = size(largeImage);
+
+currX = 1;
+currY = 1;
+
+for row=1:resultSize(1):imageSize(1)
+    for col=1:resultS:imageSize(2)
+        tileImage = largeImage(row:row+resultSize(1)-1, col:col+resultSize(2)-1, :);
+        tileAlpha = alpha(row:row+24, col:col+23, :);
+        cd tiles;
+        imwrite(tileImage, sprintf('%d-%d.png', row/resultSize(1), col/resultSize(2)), 'Alpha', tileAlpha );
+        cd ..;
+        
+    end     
+end

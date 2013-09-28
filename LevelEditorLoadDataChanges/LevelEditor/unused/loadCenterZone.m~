@@ -1,0 +1,18 @@
+% load center zone
+
+zoneStruct = localZoneMap{2,2};
+
+if ~isempty(zoneStruct)
+    obstacles = obstacles(1:gridSize(1), 1:gridSize(2));
+    grass = grass(1:gridSize(1), 1:gridSize(2));
+    
+    for i = 1:numLayers
+        layerImage{i} = [zoneStruct.layerImage.layerImage{i}]; %idk what the deal is here
+        layerAlpha{i} = [layerAlpha{i} zoneStruct.layerAlpha.layerAlpha{i}];
+    end
+else % if it's empty, there's no saved data here, so create a blank zone
+    initLayers; % blanks layer information back out to zero
+end
+
+% display everything?
+displayLayers;

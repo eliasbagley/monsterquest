@@ -1,0 +1,45 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   Author: Elias Bagley
+%   Date:   1/29/2012
+%   CS 4500 Senior Capstone Project
+%
+%  This function handles the button presses when pressed over a figure.
+%
+%   input: button, the ascii number of the button that was pressed
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% need to fix this so that quit will return
+
+switch button
+    
+    case 13 %enter
+        if selectMethod == 1isempty(x
+            prevFlag = flag;
+            flag = menu('Choose a tileset', menuChoices);
+            continue; % goes back to the main loop
+        end
+    case 'p'
+        if flag == 0 % only allow multi pt selection if we're on the map
+            selectMethod = ~selectMethod; % toggle the select method
+            continue;
+        end
+    case 'q'
+        % when the user hits 'q', it will save state and return
+        fprintf('Saving...\nGoodbye\n');
+        save mapCode;
+        save imageMatrix;
+        close all;
+        return; % exits the program
+    case 'r'
+        temp = flag;
+        flag = currentTileset; % just go back to the current tileset to select again
+        prevFlag = temp;
+        continue; % go back to the main loop
+    case 's'
+        fprintf('Saving...\n');
+        save mapCode;
+        save imageMatrix;
+        continue; % goes back to the main loop
+end

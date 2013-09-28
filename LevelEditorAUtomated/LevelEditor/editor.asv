@@ -1,0 +1,249 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   Author: Elias Bagley
+%   Date:   1/29/2012
+%   CS 4500 Senior Capstone Project
+%
+%   This program is a level editor for a game, which allows you to select
+%   tiles and draw them onto a map.
+%
+%   todo:
+%      export stuff into function (where possible)
+%      have an 'undo' hotkey (keep track of previous picture, if undo is
+%      pressed, redisplay that picture) (test this better, or make a 'redo')
+%       add copy/paste functionality
+%       add a repeating rect thing for every grid, like tiling
+%       scrollbars on the figure (might not want to do this if other stuff works)
+%       add the ability to draw trees at arbitrary pixel locations, not
+%       just snapping to grid
+%       make a separate tool to specify wher the tree trunks are, so we
+%       don't have to do it for each level we make
+%       look into 'montage' or similar to display a zone next to the current zone, so
+%       you know how to build it (can't do alpha channel, it seems)
+%       - time per zone/level of zone information coded into the tilesets
+%       - use arrow keys to concatenate matricies, so you can sequentially
+%       build an entire level (4 on a screen at a time?)
+%       - reposition the two figure windows so that both can be seen at the
+%       same time
+%       - if it's not in getrect, button presses aren't recognized. I
+%       should add a keydown handler to the main figures
+%       - can things on obstacle layer be positioned at an arbitrary pixel,
+%       or do they need to snap to grid?
+%       - toolbar might still be nice
+%       - have a button that will pop up a new figure with only the current
+%       layer (I got confused when erasing something on the wrong layer)
+%       have the coordinates be on the title of the map, and also save teh
+%       coordinate string to the struct that loadZone returns
+%       don't create a new layer if the program starts and they enter an
+%       existing location, load it instead
+
+%       right now, the grid is being saved along with everything else. it
+%       might be faster to not save this part of it
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% clean up before we take a suckers money
+close all;
+clear;
+
+%% display help information and initialize constants
+
+displayHelpInformation;
+initConstants; % initialize all constants and matricies
+
+
+%% main level creator loop
+while 1
+    
+    % decide what figure to show
+    switch flag
+        case 0 % show the map that we're drawing
+            if prevFlag ~= flag % only call the figure if the flag has changed
+                figure(handles.mapFigureHandle);
+                set(handles.mapFigureHandle, 'Name', strcat('Map-',saveDir));
+                displayLayers;
+            end
+        otherwise
+            if prevFlag ~= flag % only do the figure stuff if the flag has changed
+                figure(handles.tileFigureHandle);
+                set(handles.tileFigureHandle, 'Name', strcat('Tileset-',num2str(flag)));
+                %clf; % this might clear some memory and speed things up
+                %grid on;
+                cla reset;
+                a = imshow(tilesets{flag}, 'InitialMagnification', 100);
+                set(a, 'AlphaData', alphas{flag});
+                hold on;
+                
+                % show the layer for this tileset
+                b = imshow(gridImage{flag}, 'InitialMagnification', 100); % last layer is the gridded layer
+                set(b, 'AlphaData', gridAlpha{flag});
+                hold off;
+                
+            end
+    end
+    
+    
+    if (flag ~= 0) %figure out what picture on tileset was clicked
+        
+        prevFlag = flag;
+        currentTileset = flag; % keeps track of the current tileset
+        
+        tileset = tilesets{flag};
+        alpha_data_tileset = alphas{flag};
+        tilesetSize = size(tileset);
+        
+        [rect button] = e_getrect; % get user input
+        rect = floor(rect); % elimated fractional pixels
+        x = rect(1); y = rect(2); width = rect(3); height = rect(4);
+        
+        % figures out how many rows and columns were dragged, their
+        % location, and their index
+        [numRows numCols yStartPxTile xStartPxTile row col] = getSpan(rect, pxPerGrid);
+        
+        handleButtonPresses;
+        
+        
+        % check for errors in clicking
+        if x < 0 || y < 0 || x > tilesetSize(2) || y > tilesetSize(1) || (x + width) > tilesetSize(2) || (y+height) > tilesetSize(1)  %just ignore if you click off screen
+            continue;
+        end
+        
+        % calculate the tile number in row major of top left clicked
+        % unused in current implementation
+        %selectedTileNum = getTileNumber(flag, row, col, sizes, pxPerGrid);
+        
+        
+        % get the actual matrix data corresponding to the clicked location
+        if snap
+            selectedTile = tileset(yStartPxTile:(yStartPxTile+numRows*pxPerGrid-1), xStartPxTile:(xStartPxTile+numCols*pxPerGrid-1), :);
+            selectedTileAlpha = alpha_data_tileset(yStartPxTile:(yStartPxTile+numRows*pxPerGrid-1), xStartPxTile:(xStartPxTile+numCols*pxPerGrid-1), :);
+        else
+            selectedTile = tileset(yStartPxTile:(yStartPxTile+height-1), xStartPxTile:(xStartPxTile+width-1), :);
+            selectedTileAlpha = alpha_data_tileset(yStartPxTile:(yStartPxTile+height-1), xStartPxTile:(xStartPxTile+width-1), :);
+        end
+        
+        
+        flag = 0; % 0 is the map, go back to map canvas after picking a tile
+    else
+        if selectMethod == 0
+            
+            % this is ugly
+            if eraser
+                if needToRestore == 0
+                    % nuke the old selected tile, replace with a blank 1x1
+                    % selected tile
+                    selectedTile_old = selectedTile;
+                    selectedTileAlpha_old = selectedTileAlpha;
+                    numRows = 1;
+                    numCols = 1;
+                    selectedTile = zeros(pxPerGrid, pxPerGrid, 3);
+                    selectedTileAlpha = zeros(pxPerGrid, pxPerGrid);
+                    
+                    needToRestore = 1;
+                end
+            else
+                if needToRestore == 1
+                    selectedTile = selectedTile_old;
+                    selectedTileAlpha = selectedTileAlpha_old;
+                    needToRestore = 0;
+                end
+                
+            end
+            
+            
+            sizeTile = size(selectedTileAlpha);
+            
+            [rect button] = e_getrect;
+            rect = floor(rect);
+            x = rect(1); y = rect(2);
+            
+            handleButtonPresses; % handle button presses before saving
+            
+            
+            % save the layers and matricies on the buffer (undo stack)
+            pushLayers;
+                   
+            if (x < 0 || y < 0 || x > 2*imageSize(2) || y > 2*imageSize(1)) %just ignore if you click off image (consider allowing if they are dragging)
+                continue;
+            end
+            
+            % gets the number of rows and cols that the user clicked and
+            % dragged on the map
+            [numRowsMap numColsMap yStartPxMap xStartPxMap row col] = getSpan(rect, pxPerGrid);
+            
+            
+            % calculate the number of tiles that will fit in each direction
+            % (round down so we don't write off the end of the matrix)
+            numRowDir = floor(numRowsMap*pxPerGrid/sizeTile(1));
+            numColDir = floor(numColsMap*pxPerGrid/sizeTile(2));
+            
+            % so that single left/right click still work
+            if (numRowDir == 0)
+                numRowDir = 1;
+            end
+            if (numColDir == 0)
+                numColDir = 1;
+            end
+            
+            % still need to do error checking for this
+            
+            % temporary variables
+            startX = xStartPxMap;
+            startY = yStartPxMap;
+            
+            for i=1:numRowDir
+                xStartPxMap = startX;
+                for j=1:numColDir
+                    
+                    % alpha compositing algorithm, A over B
+                    
+                    % make sure we don't try to access off the end
+                    
+                    % can probably get tighter handling
+                    if size(doubleZoneStruct.obstacles, 1) > size(doubleZoneStruct.obstacles, 2)
+                           if (xStartPxMap+numCols*pxPerGrid-1 > 2*imageSize(2) || yStartPxMap+numRows*pxPerGrid-1 > 2*imageSize(1))
+                        break;
+                    end
+                    else % left right
+                           if (xStartPxMap+numCols*pxPerGrid-1 > 2*imageSize(2) || yStartPxMap+numRows*pxPerGrid-1 > 2*imageSize(1))
+                        break;
+                    end
+                    end
+                    
+                 
+                    
+                    
+                    %fprintf('Alpha comping\n');
+                    alphaComp;
+                    
+                    xStartPxMap = xStartPxMap+sizeTile(2);
+                    
+                end
+                yStartPxMap = yStartPxMap + sizeTile(1);
+            end
+            
+        else % the user is in 'manual obstacle selection mode'
+            % this probably doesn't work right now
+            [x y button] = e_getpts; % change this to get rect, it will be easier to use
+            % maybe add the ability to overlay what you've actually
+            % selected
+            
+            handleButtonPresses;
+            
+            % for everywhere that the user selected with getpts, set the
+            % cell as an obstacle
+            for i=1:numel(x)
+                
+                % bugs in the xStartPx code
+                xStartPx = x(i) - mod(x(i), pxPerGrid)+1;
+                yStartPx = y(i) - mod(y(i), pxPerGrid)+1;
+                row = (yStartPx-1)/pxPerGrid+1;
+                col = (xStartPx-1)/pxPerGrid+1;
+                
+                doubleZoneStruct.obstacles(row, col) = 1;
+            end
+        end
+        
+        % every iteration, draw everything
+        displayLayers;
+        
+        prevFlag = flag;
+    end
+end

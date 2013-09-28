@@ -1,0 +1,28 @@
+% appends to the indoors file where a new doorway is
+
+function writeIndoorsFile(row, col)
+
+
+cmd = sprintf('%d,%d#%d
+
+global saveDir;
+global indoorsX;
+global indoorsY;
+
+cd zones;
+cd(saveDir);
+
+fid = fopen(strcat('indoors-', saveDir, '.txt'), 'wt');
+fprintf(fid, '%d,%d#%d,%d\n', row, col, indoorsX, indoorsY);
+fclose(fid);
+
+% make them wayy far away from each other
+indoorsX = indoorsX + 1000;
+indoorsY = indoorsY + 1000;
+
+cd ..;
+cd ..;
+
+end
+
+

@@ -1,0 +1,39 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   Author: Elias Bagley
+%   Date:   1/29/2012
+%   CS 4500 Senior Capstone Project
+%   
+%  This function looks in the directory specified by path, and loads in the
+%  tileset images and alpha channels located there. It also grids each tile
+%
+%   input:  rect, [x y width height], result of getrect()
+%           pxPerGrid, the number of pixels wide and high of a grid tile
+%
+%   output: row, number of tiles in height that the user drug
+%           col, number of tiles in width that the user drug
+%      
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+function [tilesets alphas] = loadTilesets(path, pxPerGrid)
+
+filenames = dir(strcat(path, '*.png'));
+tilesets = cell(1,numel(filenames));
+alphas = cell(1, numel(filenames));
+for i = 1:numel(filenames)
+    % load the tileset
+    [tileset map alpha] = imread(strcat(path,filenames(i).name));
+    % add gridlines to the tileset
+    tileset(pxPerGrid:pxPerGrid:end,:,:) = 0;
+    tileset(:, pxPerGrid:pxPerGrid:end, :) = 0;
+    
+    % grid the alpha channel too, to opaque
+    alpha(pxPerGrid:pxPerGrid:end,:,:) = 255;
+    alpha(:, pxPerGrid:pxPerGrid:end, :) = 255;
+    
+    % save the tileset and alpha values (there are no colormap values)
+    tilesets{i} = tileset;
+    alphas{i} = alpha;
+end
+
+
+end
