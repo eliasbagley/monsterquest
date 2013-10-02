@@ -1,0 +1,113 @@
+FORMAT: Attack name#damage#pp
+
+NORMAL
+PHYSICAL
+Tackle#10#1#A weak attack by ramming into the opponent.
+Tail Slap#13#1#Slap the enemy with your tail.
+Wing Slap#13#1#Slap the enemy with your wing.
+Pinch#14#1#Pinches the enemy with strong pincers.
+Bite#15#1#A vicious biting attack.
+Vicious Teeth#17#1#Rip the enemy to shreads with razor sharp teeth.
+Constrict#17#1#Squeeze the life out of your enemy.
+Headbutt#18#2#Charge the enemy and hit him with your head.
+Body Slam#19#2#Crushes the opponent with a powerful body slam.
+Horn Charge#21#2#Rams the enemy with sturdy horns.
+Sucker Punch#25#3#Punches the enemy when he isn't looking. He won't fall for that again!
+MAGICAL
+Screech#19#2#Let out a painfully loud sound to hurt the enemy.
+Sonic Boom#21#2#Makes a sonic boom, damaing the enemy.
+Laser Beam#24#3#A powerful laser projects from the monster, damaging the enemy.
+Night Stalker#30#4#Become a stalker of the night, assailing your enemy from every direction.
+
+
+ROCK
+PHYSICAL
+Chuck Rock#12#1#Throw a big rock at the enemy, smacking him in the head.
+Rolling Boulder#20#2#A huge boulder rolls off a nearby mountain and into the enemy.
+Fissure#25#3#Smash the ground with amazing force, splitting the earth in two.
+MAGICAL
+Burrowstrike#24#3#Strike the enemy from underground.
+
+GHOST
+PHYSICAL
+Phantom Scythe#20#2#Reaper strikes the enemy with his ghostly scythe.
+Paranormal Activity#25#3#Summon local spirits to haunt the nearby area and assault the enemy monster.
+Sanguivore#25#3#Drains the enemy of his blood, to feast on it later.
+Soul Rip#24#2#Reaches into the enemy's chest and rips it in half.
+MAGICAL
+Requiem#30#3#Judge the enemies soul, causing massive magic damage.
+
+
+FIRE
+PHYSICAL
+Burning Embers#17#2#Presses burning embers on the enemy's skin, burning it.
+Fire Claws#17#2#Claws the enemy with flaming hot claws.
+MAGICAL
+Heat Wave#15#2#A wave of hot air burns the enemy.
+Demon Flame#18#1#Summons a demon flame, burning the enemy.
+Magma Splash#20#2#Splash burning hot magma all over the enemy.
+Flame Breath#22#2#Blows feirce fire at the enemy, burning it.
+Eruption#28#4#Explodes with the flaming hot intensity of a volcano, producing magma as hot as 2000C.
+Hellfire#30#3#Unleashes a furious hellfire on the enemy, singing it to ashes.
+Firestorm#34#4#Fire takes to the skies as the enemy monster is burned to a crisp.
+
+
+WATER
+PHYSICAL
+Hydro Cannon#20#2#Blasts the enemy with a powerful jet of water.
+MAGICAL
+Chilly Mist#9#1#Chills the air around you, freezing your enemy.
+
+
+GRASS
+PHYSICAL
+Venom Bite#13#1#Bites the enemy with poison soaked fangs.
+MAGICAL
+Spit Poison#18#1#Spit highly toxic poison into the enemy's face.
+Triumverate#30#3#Attack the enemy with all 3 heads.
+
+ELECTRIC
+PHYSICAL
+MAGICAL
+Spark#12#1#Creates a small, painful spark to shock the enemy.
+10,000 Volts#20#2#Your monster charges his body to 10,000 volts and discharges it on the enemy.
+Thunder Crash#26#3#Calls forth a lightning bolt to smite the enemy.
+
+
+PSYCHIC
+PHYSICAL
+Telekinesis#15#1#Twist the enemy's body, hurting it and breaking bones.
+MAGICAL
+Concussion Blast#22#2#Assaults the enemy's mind with powerful psychic waves.
+Event Horizon#30#3#Uses psychic powers to synthesize a 10,000G gravity feild near the enemy, crushing them with their own body.
+
+BUFF
+Guard#6#1#Assumes a defensive stance, temporarily increasing defense.
+Chitin Armor#6#1#Activates chitin armor to increase defense.
+Iron Skin#6#1#A more powerful version of chitin armor. Users defense is increased for the duration of battle.
+Spirit Charge#7#1#Charges the monster's spirit, temporarily increasing magic attack.
+Focus Mind#7#1#Your monster focuses it's mind, temporarily increasing its magic attack.
+Sonar#10#2#Uses sonar to detect the enemy, raising your accuracy.
+Stone Skin#6#1#Turns your skin into solid rock, increasing your defense.
+Igneous Armor#6#1#A more advanced version of stone skin, raising your defense even further beyond.
+Move Quick#9#1#The monster moves quick, raising its speeds.
+Undying Strength#5#1#The strength of the undead surges through your fists, increasing your attack damage.
+Snake Eyes#5#1#Snake eyes glow red and prepare to attack the enemy.
+
+DEBUFF
+Darkness#9#2#Shrounds the nearby area in darkness, lowering the enemy's accuracy.
+Playful Bark#5#1#Lets off a playful bark, lowering the enemy's attack.
+Evil Look#6#1#Gives the enemy an evil look, lowing its defense.
+Poltergeist#8#1#Assumes the form of a poltergeist, scaring the enemy and lowering its defense.
+Nine Curses#8#1#Curses the enemy into taking more magic damage.
+Fling Sand#10#1#Flings sand into the enemy's eyes, lowering its accuracy.
+Smokescreen#10#1#Fogs up the enemy's vision with billowing, black smoke.
+Dung Fling#10#1#Flings dung into the eyes of the enemy, lowering its accuracy.
+
+
+RESTORE
+Meditate#5#3#Meditate your health back, restoring 50% of your max HP.
+Roost#5#3#Perch up on a nearby ledge, resting and regaining health.
+
+TEMP
+undecided#0#100#Derp

@@ -1,0 +1,5 @@
+94#6#20#_#_#_#Have some fruit. Be sure to give some to your monsters as well! It will heal them.#3
+
+95#14#18#_#_#_#That kind lady was nice enough to give me fruit. I already spent my allowance today so I don't have any money for potions!#0
+
+91#23#20#_#_#_#You don't look like you have enough money for what I sell. Gather some and come back later.#-1

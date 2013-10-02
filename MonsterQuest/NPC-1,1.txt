@@ -1,0 +1,5 @@
+90#24#20#_#_#_#I sell potions and such! Use these when you are in a pinch.#1
+
+88#8#20#_#_#_#Welcome to my store kid. Feel free to browse my wares.#2
+
+93#16#17#_#_#_#Oh you have a monster? How cool! I wish I had a monster, but I am not old enough.#0

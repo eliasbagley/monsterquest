@@ -1,0 +1,5 @@
+94#16#12#_#_#_#Your monster looks hurt! Allow me to heal them to full health!#3
+
+13#15#20#_#_#_#I see your Zerda is type normal. Did you know that he will be type fire when he evolves into Vixen? That will take a lot of training to level up for that. Be sure to use your type fire attacks on the Rattles in the brush. Since Rattles is type grass, the fire attacks will deal extra damage to them!#0
+
+-1#5#11#_#_#_#Withdrawing monsters from monster bank#4

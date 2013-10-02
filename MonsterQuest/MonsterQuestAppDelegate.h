@@ -7,15 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TitleScreenController.h"
 
-@class MonsterQuestViewController;
 
-@interface MonsterQuestAppDelegate : NSObject <UIApplicationDelegate> {
+@class WorldController;
+
+@interface MonsterQuestAppDelegate : NSObject <UIApplicationDelegate> 
+{
+    UIWindow* _window;
+    Player* _player;
+    World* _world;
+    UIImage* _picture;
+    //WorldController* _worldController;
+    TitleScreenController* _titleController;
+    
+	UINavigationController* _navController;
 
 }
 
-@property (nonatomic, retain) IBOutlet UIWindow *window;
-
-@property (nonatomic, retain) IBOutlet MonsterQuestViewController *viewController;
 
 @end

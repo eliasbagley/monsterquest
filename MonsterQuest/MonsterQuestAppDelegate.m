@@ -8,22 +8,39 @@
 
 #import "MonsterQuestAppDelegate.h"
 
-#import "MonsterQuestViewController.h"
+@interface MonsterQuestAppDelegate ()
+@end
 
 @implementation MonsterQuestAppDelegate
-
-
-@synthesize window=_window;
-
-@synthesize viewController=_viewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-     
-    self.window.rootViewController = self.viewController;
-    [self.window makeKeyAndVisible];
-    return YES;
+    _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+	[_window setBackgroundColor:[UIColor blackColor]];
+    
+    //_player = [[Player alloc] initWithName:@"Taco"];
+    _picture = [[UIImage imageNamed:@"background2"] retain];
+    //_world = [[World alloc] initWithPlayer:_player];
+    //_worldController =[[WorldController alloc] initWithWorld:_world];
+    _titleController = [[TitleScreenController alloc] init];
+    _navController = [[UINavigationController alloc] initWithRootViewController:_titleController];
+    
+    
+	[_navController setNavigationBarHidden:TRUE animated:NO];
+    
+    [_window addSubview:[_navController view]];
+    [_window makeKeyAndVisible];
+    
+    return true;
+
+}
+
+- (void) applicationDidFinishLaunching:(UIApplication*)application 
+{
+    _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+	[_window setBackgroundColor:[UIColor greenColor]];
+    [_window makeKeyAndVisible];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -67,9 +84,16 @@
 
 - (void)dealloc
 {
+    [_world release];
     [_window release];
-    [_viewController release];
+    [_titleController release];
+    [_player release];
+    [_picture release];
+    [_navController release];
+    
     [super dealloc];
 }
+
+
 
 @end

@@ -1,0 +1,27 @@
+PERMCHANGE
+FORMAT#: Name#stat#value#goldvalue#description text
+Weak Potion#4#10#5#Restores 10 HP to a selected monster.
+Strong Potion#4#50#20#Restores 50 HP to a selected monster.
+Ultra Potion#4#100#50#Restores 100 HP to a selected monster.
+
+TEMPCHANGE
+FORMAT#: Name#stat#value#goldvalue#description text
+FORMAT#Attack UP#5#1#25#Increases a selected monsters physical attack for the duration of the battle. Can only be used in combat.
+FORMAT#Defense UP#6#1#25#Increases a selected monsters physical defense for the duration of the battle. Can only be used in combat.
+
+MONSTERBALL
+FORMAT#: name#capture power #goldvalue#description text
+Monsterball#15#150#Monsterballs are used to capture wild monsters. Can only be used in combat.
+
+VALUABLE
+FORMAT#: name#gold value#description
+Large Coin#5#A large gold coin.
+Gold Ore#50#Raw gold ore. It hasn't been processed yet, but likely will fetch a good price.
+Garnet#100#A red birthstone. Surely this is quite valuable.
+Sapphire#200#A beautiful blue sapphire. It glimmers in the light.
+Gold Bars#250#A fat stack of sollid gold bars. It's quite heavy.
+Amethyst#500#A beautiful purple gem. It has been cut quite well.
+Diamond#800#A gorgeous diamond. Its a perfect cut.
+Emerald#800#A large green emerald. It will fetch a high price.
+Ruby Crystal#1000#A gigantic block of raw ruby crystal. It hasn't been cut yet, but it makes up for its quality in weight.
+Blood Diamond#1500#An odd crystal. Its swirling red and black colors are mesmerising. Likely the most valuable object in all the lands.

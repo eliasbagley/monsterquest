@@ -1,0 +1,8 @@
+11#13#16#_#_#_#I'm taking a break from all this intense battle. However, if I leave the gym, I must re-fight through all the guys I've defeated.#0
+
+3#29#17#Gym Bruiser 1#This is gonna be too easy. You don't even stand a chance.#You're stronger than I thought. I bet some of the other guys here could take you.#If you really want to fight Casey, just continue down this hallway.#0#1
+Tibbers#12
+
+2#23#6#Gym Bruiser 2#You managed to beat the other guy, eh? Pretty good, but lets see what you can do.#Oh wow. You're a lot stronger than I expected.#It's not every day you lose to a kid, ya know?#0#2
+Batters#12
+Yuray#12

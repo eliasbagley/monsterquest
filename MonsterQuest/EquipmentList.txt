@@ -1,0 +1,54 @@
+################ hp # phys attack # phys def # magic attack # magic def # speed # accuracy #crit
+            
+WEAPON
+Weak Claws of Attack#0#3#0#0#0#0#0#0
+Light Magic Wand#0#0#0#3#0#0#0#0
+Sturdy Sword#0#7#0#0#0#0#0#3
+Battle Axe#5#7#0#0#0#0#0#0
+Sharp Trident#6#3#0#0#0#0#0#3
+Ancient Katana#0#10#0#0#0#0#5#5
+Glimmering Sword#0#10#0#0#0#0#0#7
+Steel Nunchaku#0#7#0#0#0#0#3#3
+Double Edged Sword#0#5#0#0#0#0#0#3
+Solid Iron Hammer#10#5#0#0#0#0#0#2
+Solid Steel Axe#10#9#0#0#0#0#0#0
+Buster Sword#37#23#0#0#0#0#0#2
+Flaming Spear#0#12#0#0#0#0#0#6
+Demonic Tome#0#0#0#10#0#0#0#0
+Holy Book#3#0#0#8#5#0#0#0
+Deku Stick#2#2#0#0#0#0#0
+The Butcher's Cleaver#25#28#0#0#0#0#0#2
+Phase Blade#17#23#5#0#5#0#0#1
+
+ARMOR
+Cape of Defense#5#0#5#0#5#0#0#0
+Linen Cloak#5#0#5#0#0#0#0#0
+Iron Armor#7#0#10#0#5#0#0#0
+Grand Plate Mail#17#0#20#0#0#0#0#0
+Turtle Shell#0#0#13#0#13#0#0#0
+Link's Tunic#10#0#10#0#10#5#0#0
+Saiyan Tunic#14#0#11#0#11#8#0#0
+
+ACCESSORY
+Cheap Boots#0#0#2#0#2#3#0#0
+Leather Belt#4#4#0#0#0#0#0#0
+Wool Boots#0#0#4#0#4#6#0#0
+Iron Treads#3#0#7#0#4#5#0#0
+Lesser Power Wrist#10#5#0#0#0#0#0#0
+Rabbit Ears#0#0#0#0#0#10#0#0
+Merlin's Ring#8#2#3#15#4#5#0#0
+Elven Shoes#10#7#3#0#0#8#0#4
+Merlin's Cap#0#0#0#10#10#0#0#0
+Veigar's Cap#0#0#0#20#0#0#0#0
+Glass Shield#15#0#3#0#17#0#0#0
+Elemental Bracers#10#3#3#3#3#3#0#1
+Teemo's Rabbit Cap#0#1#0#1#0#20#0#1
+Poker Glasses#0#0#0#0#0#0#0#3
+Aurora Ring#5#5#0#5#0#5#0#1
+Marching Drum#0#0#0#0#0#8#0#0
+Elven Ring#5#6#3#0#0#5#0#3
+Ancient Chinese Talisman#5#5#5#5#5#5#0#2
+Cross of Warding#6#0#0#0#7#0#0#0
+Holy Talisman of Warding#8#0#0#0#8#0#0#0
+Number 1 Ribbon#1#1#1#1#1#1#0#1
+The Queen's Amulet#12#2#6#3#5#0#0#1

@@ -1,0 +1,5 @@
+94#15#9#_#_#_#Your monster looks hurt! Allow me to heal them to full health!#3
+
+13#14#17#_#_#_#I'm waiting for my monsters to be healed.#0
+
+-1#4#8#_#_#_#Withdrawing monsters from monster bank#4

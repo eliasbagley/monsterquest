@@ -1,0 +1,146 @@
+#Teddy
+1_Tackle
+5_Guard
+10_Heat Wave
+15_Burning Embers
+20_EVOLVE_Tibbers
+
+#Tibbers
+1_Body Slam
+1_Flame Breath
+25_Hellfire
+30_Spirit Charge
+
+#Tanooky
+1_Playful Bark
+2_Tackle
+9_Headbutt
+12_Bite
+15_EVOLVE_Twitch
+
+#Twitch
+1_Headbutt
+18_Move Quick
+22_Sucker Punch
+27_10,000 Volts
+
+#Rattles
+1_Tail Slap
+8_Bite
+10_Guard
+12_Spit Poison
+15_EVOLVE_Konda
+
+#Konda
+1_Spit Poison
+2_Snake Eyes
+18_Constrict
+24_Venom Bite
+30_EVOLVE_Tripan
+
+#Tripan
+1_Venom Bite
+2_Snake Eyes
+35_Laser Beam
+40_Triumverate
+
+#Schnook
+1_Wing Slap
+2_Sonar
+8_Screech
+10_Roost
+14_EVOLVE_Batters
+
+#Batters
+1_Bite
+2_Roost
+18_Sonic Boom
+22_Sanguivore
+28_EVOLVE_Creeper
+
+#Creeper
+1_Darkness
+2_Sanguivore
+33_Night Stalker
+99_undecided
+
+#Salaz
+1_Headbutt
+2_Smokescreen
+14_Fire Claws
+20_Eruption
+
+#Scarab
+1_Dung Fling
+2_Pinch
+11_Chitin Armor
+14_Rolling Boulder
+17_EVOLVE_Goliath
+
+#Goliath
+1_Rolling Boulder
+2_Iron Skin
+24_Horn Charge
+29_Burrowstrike
+
+#Zerda
+1_Bite
+7_Playful Bark
+11_Fire Claws
+15_Flame Breath
+20_EVOLVE_Vixen
+
+#Vixen
+1_Flame Breath
+2_Vicious Teeth
+25_Firestorm
+32_Nine Curses
+
+#Psycho
+1_Telekinesis
+5_Meditate
+7_Focus Mind
+10_Event Horizon
+
+#Doogers
+1_Bite
+3_Hellfire
+4_Laser Beam
+12_Thunder Crash
+
+#Hatter
+1_undecided
+2_undecided
+3_undecided
+4_undecided
+
+#Malz
+1_undecided
+2_undecided
+3_Concussion Blast
+4_undecided
+
+#Yuray
+1_Demon Flame
+2_Poltergeist
+99_undecided
+4_Paranormal Activity
+
+#Rocko
+1_Chuck Rock
+2_Stone Skin
+3_Fling Sand
+18_Rolling Boulder
+22_EVOLVE_Goroth
+
+#Goroth
+1_Rolling Boulder
+2_Igneous Armor
+26_Fissure
+33_Magma Splash
+
+#Reaper
+1_Phantom Scythe
+2_Undying Strength
+11_Soul Rip
+12_Requiem
