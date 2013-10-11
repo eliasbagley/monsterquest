@@ -45,14 +45,15 @@
 
 //Returns true if its time to update.
 -(void) animateStep
-{   
+{
     if(_player.moving)
     {
         _animationProgress+=(AnimationsPerSecond/FPS);
         if(_animationProgress>1.0)
         {
+            NSLog(@"bump stepindex to %d", _stepindex);
             _animationProgress=0;
-            _stepindex=_stepindex++;
+            _stepindex = _stepindex + 1;
             
             if(_stepindex>3)
                 _stepindex=0;
@@ -81,7 +82,7 @@
     int yOffset = 48*_drawdirection + _yOffset;
     //xOffset = 0;
     //yOffset = 140;
-    //log@"x:%i, y:%i", xOffset, yOffset);
+    //NSLog(@"x:%i, y:%i", xOffset, yOffset);
     
     self.contentOffset=CGPointMake( xOffset*worldScale, yOffset*worldScale);
     

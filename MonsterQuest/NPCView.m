@@ -55,7 +55,7 @@
         if(_animationProgress>1.0)
         {
             _animationProgress=0;
-            _stepindex=_stepindex++;
+            _stepindex=_stepindex + 1;
             
             if(_stepindex>3)
                 _stepindex=0;
